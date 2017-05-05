@@ -8,7 +8,7 @@ $(document).ready(function() {
             ease: "easeInOutCirc",
             style: 'light',
             delayBefore: 800, //delay time in milliseconds
-            exitTime: 300
+            exitTime: 500
         }
     }
 
