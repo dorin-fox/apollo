@@ -1,0 +1,409 @@
+/*************General CSS**************/
+@font-face {
+    font-family: "LM Roman";
+    src: url(assets/fonts/lmromandemi10-regular.otf);
+}
+body{
+background-color: #efefef;    
+}
+p{
+    font-family: LM Roman;
+    font-style: italic;
+    font-size: 15px;
+    color: #000000;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Raleway",sans-serif;
+    font-weight: 100;
+    color: #000000;
+}
+h1{
+    font-size: 3em;
+     line-height: 2;
+}
+a{
+text-decoration: none;
+color: #000000;
+}
+a:hover{
+text-decoration: none;
+color: #000000;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea{
+    color: #00000;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    padding: 10px 10px;
+    background:transparent;
+    border: 2px solid #000000;
+}
+textarea{
+    width: 75%;
+    height: 30vh;
+}
+input[type="text"],
+input[type="email"]{
+    width: 35%;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #000000;
+    width: 75%;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    cursor: pointer;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000000;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000000;
+}
+:focus{
+    outline: 0;
+}
+/*********Fade In Effect on sections************/
+.fullpage-wrapper {
+	width: 100%!important;
+	transform: none!important;
+}
+
+.fp-section {
+	width: 100%!important;
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	opacity: 0;
+	
+	transition: all .7s ease-in-out;
+}
+
+.fp-section.active {
+	visibility: visible;
+	opacity: 1;
+	
+}
+
+/***************Navbar***************/
+#title {
+  color: #f6f6f6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+#text-btn{
+  font-family: "Raleway",sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: fixed;
+  top: 31px;
+  right: 140px;
+  z-index: 4;
+}
+
+#btn {
+  position: fixed;
+  z-index: 9999;
+  top: 35px;
+  right: 110px;
+  cursor: pointer;
+  -webkit-transition: left 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  transition: left 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+
+#btn div {
+  width: 20px;
+  height: 1px;
+  margin-bottom: 5px;
+  background-color: #221815;
+  -webkit-transition: -webkit-transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, box-shadow 250ms, background-color 500ms;
+  transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91), opacity 500ms, box-shadow 250ms, background-color 500ms;
+}
+
+#btn:hover > div { box-shadow: 0 0 1px #221815; }
+
+#btn.active {  }
+
+#btn.active div { background-color: #343838; }
+
+#btn.active:hover > div { box-shadow: 0 0 1px #343838; }
+
+#btn.active #top {
+  -webkit-transform: translateY(2px) rotate(-135deg);
+  -ms-transform: translateY(2px) rotate(-135deg);
+  transform: translateY(2px) rotate(-135deg);
+}
+
+#btn.active #middle {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+#btn.active #bottom {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+  -ms-transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+#box {
+  position: fixed;
+  z-index: 999;
+  overflow: auto;
+  top: 0px;
+  right: -275px;
+  width: 275px;
+  opacity: 0;
+  padding: 20px 0px;
+  height: 100%;
+  background-color: #f6f6f6;
+  color: #343838;
+  -webkit-transition: all 750ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  transition: all 750ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+
+#box.active {
+  right: 0px;
+  opacity: 1;
+}
+
+#items {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#items .item {
+  position: relative;
+  cursor: pointer;
+  font-family: "Raleway",sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  padding: 15px 30px;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+#items .item:hover {
+  padding: 15px 45px;
+  background-color:rgba(144, 144, 144, 0.4);
+}
+/**********Welcome Section***********/
+#welcome-section{
+ 
+}
+
+#welcome-section::after{
+    content: "A";
+    font-family: "Relaway",sans-serif;
+    font-weight: 600;
+    font-size: 72em;
+    color: #e3e3e3;
+    position:absolute;
+    top: -390px;
+    bottom: 0;
+    left:-80px;
+    z-index: -9;
+}
+.welcome-section-text{
+    padding-top: 190px;
+    z-index: 10;
+}
+.welcome-section-bg img{
+    width: 117vh;
+    height: 100vh;
+}
+.second-l{
+    transform: rotate(90deg);
+    left: -20px;
+}
+/*************About Section***************/
+.line-separator{
+width: 8vh;
+height:1px;
+background:#717171;
+border-bottom:1px solid #313030;
+position: relative;
+top: 65px;
+}
+.about-section-text{
+    padding-top: 50px;
+}
+.about-section-text h1{
+    margin-left: 65px;
+}
+.about-section-img img{
+    width: 95%;
+}
+.about-section-img::after{
+    content: "P";
+    font-family: "Relaway",sans-serif;
+    font-weight: 600;
+    font-size: 72em;
+    color: #e3e3e3;
+    position:absolute;
+    top: -450px;
+    bottom: 0;
+    left:-120px;
+    z-index: -9;
+}
+.social {
+    margin-top: 20px;
+    margin-left: -50px;
+}
+.social li{
+ list-style: none;
+ float: left;
+ font-size: 1.2em;
+ padding: 0px 10px;
+}
+.social li a{
+     color: #fff;
+     background: #909090;
+     padding: 5px 10px;
+    transition: background .3s ease-in-out;
+}
+.social li a:hover{
+     background: #020202;
+}
+/**********Portfolio Section 1**********/
+.fp-controlArrow.fp-prev {
+    left: 50px;
+    border: none;
+    width: 75px;
+    height: 75px;
+    background: url(../img/Previous.png) no-repeat;
+    cursor: pointer;
+}
+.fp-controlArrow.fp-next {
+    right: 50px;
+    border: none;
+    width: 75px;
+    height: 75px;
+    background: url(../img/Next.png) no-repeat;
+    cursor: pointer;
+}
+.first-slide{
+   background: url(../img/progect-bg.png) no-repeat;
+   background-size: cover;
+}
+.second-slide{
+   background: url(../img/progect-bg2.png) no-repeat;
+   background-size: cover;
+}
+.third-slide{
+   background: url(../img/progect-bg3.png) no-repeat;
+   background-size: cover;
+}
+/***********Portfolio Section 2************/
+#portfolio-section-2::after{
+    content: "L";
+    font-family: "Relaway",sans-serif;
+    font-weight: 600;
+    font-size: 72em;
+    color: #e3e3e3;
+    position:absolute;
+    top: -390px;
+    bottom: 0;
+    left:0px;
+    z-index: -9;
+}
+.portfolio-bg img{
+    width: 150%;
+}
+/**********Portfolio Section 3************/
+#contact{
+    text-align: center;
+}
+.contact-text{
+    margin-bottom: 60px;
+}
+.flipster__button{
+    opacity: 1;
+    margin: 0;
+    background: white;
+    padding: 10px 20px;
+        z-index: 998;
+}
+.flipster__button svg {
+    width: 2em;
+    stroke: black;
+    fill: transparent;
+    stroke-width: 0.5px;
+    stroke-linecap: round;
+}
+/************MEDIA QUERIES**************/
+@media screen and (max-width: 1024px){
+   .contact-text {
+    margin-bottom: 0px;
+}
+}
+@media screen and (max-width: 991px){
+.welcome-section-text {
+    padding-top: 0px;
+}
+    .welcome-section-bg img {
+    display: none;
+}
+    .about-section-img img {
+    display: none;
+}
+    .about-section-text {
+    padding-left: 50px;
+}
+    .portfolio-bg img {
+    display: none;
+}
+    #btn {
+    right: 50px;    
+}
+    #text-btn {
+        right: 75px;
+    }
+}
+@media screen and (max-width: 480px){
+    .fp-controlArrow.fp-prev {
+    left: 0px;
+    }
+    .fp-controlArrow.fp-next {
+    right: 0px;
+    }
+}
+@media screen and (max-width: 425px){
+   h1 {
+    font-size: 2em;
+    line-height: 1.5;
+} 
+    .about-section-text p{
+        display: none;
+    }
+    .about-section-text h1 {
+    margin-left: 0px;
+}
+}
