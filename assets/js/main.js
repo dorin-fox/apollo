@@ -7,8 +7,8 @@ $(document).ready(function() {
             exitFx:'slideRight',
             ease: "easeInOutCirc",
             style: 'light',
-            delayBefore: 1000, //delay time in milliseconds
-            exitTime: 500
+            delayBefore: 800, //delay time in milliseconds
+            exitTime: 300
         }
     }
 
